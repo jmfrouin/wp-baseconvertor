@@ -1,0 +1,79 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BaseConvertor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Base Convertor 1.00" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <TextBlock Height="39" HorizontalAlignment="Left" Margin="74,58,0,0" Name="textBlockResult1" Text="0xCADE45689" VerticalAlignment="Top" Width="372" FontSize="32" TextAlignment="Right" />
+            <TextBlock Height="22" HorizontalAlignment="Left" Margin="12,99,0,0" Name="textBlockBin2" Text="0110 0110 1100 1001   0110 0110 1100 1001" VerticalAlignment="Top" Width="438" TextAlignment="Center" FontSize="18" />
+            <TextBlock Height="22" HorizontalAlignment="Left" Margin="12,127,0,0" Name="textBlockBin1" Text="0110 0110 1100 1001   0110 0110 1100 1001" VerticalAlignment="Top" Width="438" TextAlignment="Center" FontSize="18" />
+            <Button Content="xor" Height="81" HorizontalAlignment="Left" Margin="0,143,0,0" Name="buttonXOR" VerticalAlignment="Top" Width="141" Background="#FF00C2FF" Click="buttonXOR_Click" />
+            <Button Content="and" Height="81" HorizontalAlignment="Left" Margin="222,143,0,0" Name="buttonAND" VerticalAlignment="Top" Width="128" Background="#FF00C2FF" Click="buttonAND_Click" />
+            <Button Content="or" Height="81" HorizontalAlignment="Right" Margin="0,143,-5,0" Name="buttonOR" VerticalAlignment="Top" Width="131" Background="#FF00C2FF" Click="buttonOR_Click" />
+            <Button Content="not" Height="81" Margin="122,143,215,0" Name="buttonNOT" VerticalAlignment="Top" Background="#FF00C2FF" Click="buttonNOT_Click" />
+            <Button Content="D" Height="86" HorizontalAlignment="Left" Margin="0,204,0,0" Name="buttonD" VerticalAlignment="Top" Width="94" Background="#FFFFCD24" Click="buttonD_Click" />
+            <Button Content="E" Height="86" HorizontalAlignment="Right" Margin="0,204,288,0" Name="buttonE" VerticalAlignment="Top" Width="94" Background="#FFFFCD24" Click="buttonE_Click" />
+            <Button Content="F" Height="86" HorizontalAlignment="Left" Margin="147,204,0,0" Name="buttonF" VerticalAlignment="Top" Width="94" Background="#FFFFCD24" Click="buttonF_Click" />
+            <Button Content="A" Height="95" Margin="0,268,0,0" Name="buttonA" VerticalAlignment="Top" Background="#FFFFCD24" HorizontalAlignment="Left" Width="94" Click="buttonA_Click" />
+            <Button Content="B" Height="95" HorizontalAlignment="Left" Margin="74,268,0,0" Name="buttonB" VerticalAlignment="Top" Width="94" Background="#FFFFCD24" Click="buttonB_Click" />
+            <Button Content="C" Height="95" HorizontalAlignment="Left" Margin="147,268,0,0" Name="buttonC" VerticalAlignment="Top" Width="94" Background="#FFFFCD24" Click="buttonC_Click" />
+            <Button Content="7" Height="99" Margin="0,343,0,0" Name="button7" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Background="#FFFF9B00" Click="button7_Click" />
+            <Button Content="8" Height="99" Margin="100,343,243,0" Name="button8" VerticalAlignment="Top" Background="#FFFF9B00" Click="button8_Click" />
+            <Button Content="9" Height="99" Margin="192,343,134,0" Name="button9" VerticalAlignment="Top" Background="#FFFF9B00" Click="button9_Click" />
+            <Button Content="4" Height="100" Margin="0,421,335,0" Name="button4" VerticalAlignment="Top" Background="#FFFF9B00" Click="button4_Click" />
+            <Button Content="5" Height="100" Margin="100,421,243,0" Name="button5" VerticalAlignment="Top" Background="#FFFF9B00" Click="button5_Click" />
+            <Button Content="6" Height="100" Margin="192,421,134,0" Name="button6" VerticalAlignment="Top" Background="#FFFF9B00" Click="button6_Click" />
+            <Button Content="1" Height="107" HorizontalAlignment="Left" Margin="0,501,0,0" Name="button1" VerticalAlignment="Top" Width="121" Background="#FFFF9B00" Click="button1_Click" />
+            <Button Content="2" Height="107" Margin="0,501,243,0" Name="button2" VerticalAlignment="Top" HorizontalAlignment="Right" Width="113" Background="#FFFF9B00" Click="button2_Click" />
+            <Button Content="3" Height="107" Margin="192,501,134,0" Name="button3" VerticalAlignment="Top" Background="#FFFF9B00" Click="button3_Click" />
+            <Button Content="0" Height="110" HorizontalAlignment="Right" Margin="0,586,243,0" Name="button0" VerticalAlignment="Top" Width="213" Background="#FFFF9B00" Click="button0_Click" />
+            <Button Content="&lt;-" Height="86" HorizontalAlignment="Left" Margin="330,204,0,0" Name="buttonDel" VerticalAlignment="Top" Width="131" Background="PeachPuff" Click="buttonDel_Click" />
+            <Button Content="AC" Height="95" HorizontalAlignment="Left" Margin="330,268,0,0" Name="buttonReset" VerticalAlignment="Top" Width="131" Background="PeachPuff" Click="buttonReset_Click" />
+            <Button Content="*" Height="110" Margin="301,586,-5,0" Name="buttonMul" VerticalAlignment="Top" Background="#FF00C2FF" Click="buttonMul_Click" />
+            <Button Content="/" Height="99" Margin="301,343,-5,0" Name="buttonDiv" VerticalAlignment="Top" Background="#FF00C2FF" Click="buttonDiv_Click" />
+            <Button Content="+" Height="100" Margin="301,421,-5,0" Name="buttonPlus" VerticalAlignment="Top" Background="#FF00C2FF" Click="buttonPlus_Click" />
+            <Button Content="-" Height="107" Margin="301,501,-5,0" Name="buttonSub" VerticalAlignment="Top" Background="#FF00C2FF" Click="buttonSub_Click" />
+            <Button Background="#FFFF8FB9" Content="Hex" Height="86" HorizontalAlignment="Left" Margin="222,204,0,0" Name="buttonHex" VerticalAlignment="Top" Width="128" Click="buttonHex_Click" />
+            <Button Background="#FFFF8FB9" Content="Dec" Height="95" HorizontalAlignment="Left" Margin="222,268,0,0" Name="buttonDec" VerticalAlignment="Top" Width="128" Click="buttonDec_Click" />
+            <Button Content="=" Height="110" HorizontalAlignment="Left" Margin="190,586,0,0" Name="buttonEqual" VerticalAlignment="Top" Width="132" Background="#FF0AC147" Click="buttonEqual_Click" />
+            <TextBlock Height="36" Margin="12,61,362,0" Name="textBlockOp" Text="xor" VerticalAlignment="Top" TextAlignment="Center" FontSize="20" />
+            <TextBlock FontSize="32" Height="36" HorizontalAlignment="Left" Margin="74,16,0,0" Name="textBlockResult2" Text="0xCADE45689" TextAlignment="Left" VerticalAlignment="Top" Width="372" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
